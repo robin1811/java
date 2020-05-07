@@ -1,71 +1,71 @@
-// 1						1
-// 1	2				2	1
-// 1	2	3		3	2	1
-// 1	2	3	4	3	2	1
-// import java.util.Scanner;
-// class test2{
-//     public static void main(String[] args){
-//         Scanner scn= new Scanner(System.in);
-//         int n = scn.nextInt();
-//         for(int i=1;i<=n;i++){
-//             for(int j=1;j<=i;j++){
-                // if(j==n){ continue;}                                                                         //question1
+1						1
+1	2				2	1
+1	2	3		3	2	1
+1	2	3	4	3	2	1
+import java.util.Scanner;
+class test2{
+    public static void main(String[] args){
+        Scanner scn= new Scanner(System.in);
+        int n = scn.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                if(j==n){ continue;}                                                                         //question1
 
-//                 System.out.print(j+" ");
-//             }
-//             int c=(n-i)*2;
-//             for(int k=1;k<c;k++){
-//                 System.out.print("  ");
-//             }
-//             for(int l=i;l>=1;l--){
+                System.out.print(j+" ");
+            }
+            int c=(n-i)*2;
+            for(int k=1;k<c;k++){
+                System.out.print("  ");
+            }
+            for(int l=i;l>=1;l--){
 
-//                 System.out.print(l+" ");
-//             }
+                System.out.print(l+" ");
+            }
 
-//             System.out.println();
-//         }
+            System.out.println();
+        }
 
 
-//     }
-// }
+    }
+}
 // import java.util.*;
    
 //    class test2{
    
-//        public static void main(String[] args) {
-//            Scanner scn = new Scanner(System.in);
-//            int k = scn.nextInt();
-//            int n = scn.nextInt();
-//            if(k>0){k=-k;}
-//            else{ int c = -k; k=2*c-k+1;}                                                             //question2
+       public static void main(String[] args) {
+           Scanner scn = new Scanner(System.in);
+           int k = scn.nextInt();
+           int n = scn.nextInt();
+           if(k>0){k=-k;}
+           else{ int c = -k; k=2*c-k+1;}                                                             //question2
    
-//            int nod = 0;
-//            int temp = n;
-//            while(temp != 0){
-//                temp /= 10;
-//                nod++;
-//            }
+           int nod = 0;
+           int temp = n;
+           while(temp != 0){
+               temp /= 10;
+               nod++;
+           }
    
-//            k = k % nod;
-//            if(k < 0)
-//                k += nod;
+           k = k % nod;
+           if(k < 0)
+               k += nod;
    
-//            int div = 1;
-//            int mult = 1;
-//            for(int i = 1; i <= nod; i++){
-//                if(i <= k)
-//                    div *= 10;
-//                else 
-//                    mult *= 10;
-//            }
+           int div = 1;
+           int mult = 1;
+           for(int i = 1; i <= nod; i++){
+               if(i <= k)
+                   div *= 10;
+               else 
+                   mult *= 10;
+           }
    
-//            int quo = n / div;
-//            int rem = n % div;
+           int quo = n / div;
+           int rem = n % div;
    
-//            int r = rem * mult + quo;
-//            System.out.println(r);
-//        }
-//    }
+           int r = rem * mult + quo;
+           System.out.println(r);
+       }
+   }
 
 import java.util.*;
 class lec009{

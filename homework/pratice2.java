@@ -1,37 +1,41 @@
-import java.util.Scanner;
-class pratice{
-    
-    static Scanner scn = new Scanner(System.in);
-    public static void IsPrime2(int n){
-        for(int i=1; i<=n;i++){
-            int no = scn.nextInt();
-        int count=0;
-        for(int div=2;div*div<no;div++){
-            if(no%div==0){
-                count++;
-                break;
-            }
-        }if(count==0){
-        System.out.println("prime");
+import java.util.*;
+class pratice2{
+    public static void SpiralPrint(int[][] arr)
+    {
+     int rmin=0,rmax = arr.length-1;
+     int cmin=0,cmax = arr[0].length-1;
+     int count=0;
+     while(count < arr.length * arr[0].length)
+    {  //left wall  
+        for(int i=rmin; i<=rmax; i++){
+            System.out.print(arr[i][cmin]+" "); count++;
         }
-        else{System.out.println("NOT PRIME");}
+        cmin++;
+        //bottom wall
+        for(int i=cmin; i<=cmax; i++){
+            System.out.print(arr[rmax][i]+" "); count++;
         }
-    }
-    public static void IsPrime3(int n){
-        int count=0;
-        for(int div=2;div*div<n;div++){
-            if(n%div==0){
-                count++;
-                break;
-            }
-        }if(count==0){
-        System.out.println("prime");
+        rmax--;
+        //right wall
+        for(int i=rmax; i>=rmin; i--){
+            System.out.print(arr[i][cmax]+" "); count++;
         }
-        else{System.out.println("NOT PRIME");}
+        cmax--;
+        //top wall
+        for(int i=cmax; i>=cmin; i--){
+            System.out.print(arr[rmin][i]+" "); count++;
         }
+        rmin++;
 
-public static void main(String[] args){
-    int a = scn.nextInt();
-    IsPrime3(a);
-}
+        
+    }
+ }
+ public static void main(String[] args){
+    int[][] arr1 = {{1,2,3,4,5},
+                    {6,7,8,9,10},
+                    {11,12,13,14,15},
+                    {16,17,18,19,20},
+                    {21,22,23,24,25}};
+    SpiralPrint(arr1);
+ }
 }

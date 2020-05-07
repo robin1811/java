@@ -38,7 +38,7 @@ class lec12{
     }
     // question 6
     public static int Toh(String s,String d,String h,int n){
-        if(n==0){return 1;}
+        if(n==0){return 0;}
         
         int ans = Toh(s,h,d,n-1);
         System.out.println("move "+n+ " from " +s+" to " +d);
@@ -76,7 +76,6 @@ class lec12{
         System.out.println(arr[n]);
         ArrayPrintRev(arr,n-1);
     } 
-
     public static int LargestInArray(int []arr,int n){
         if(n==arr.length-1){int largest1 = arr[n]; return largest1;}
         int largest = LargestInArray(arr,n+1);
@@ -88,32 +87,28 @@ class lec12{
         // PrintDecreasing(5);                                      question 1
         // PrintIncreasing(5);                                      question 2
         // Fn1(5);                                                  question 3
-        // System.out.println(factorial(n));                        question 4
+        // System.out.println(factorial(5));                           //question 4
         // int n =PowOfANum(3,4);                                   question 5
         // System.out.println(n); 
 
-        // int ans = Toh("SOURCE","DESTINATION","HELPER",3);                   question 6;
-        // System.out.println(ans);  
-        int ans = TowerOfHanoi("source","destination","helper",5);    
-        System.out.println(count);     
+        int ans = Toh("SOURCE","DESTINATION","HELPER",3);                  //question 6;
+        System.out.println(ans);  
+        // int ans = TowerOfHanoi("source","destination","helper",5);    
+        // System.out.println(count);     
         // int [] arr = {2,5,7,9};
         // ArrayPrintRev(arr,4); 
         // int [] arr = {2,5,7,9,4,-1};
         // System.out.println(LargestInArray(arr,0));
-
     }
 }
 
-//hello
-
-
-
-
-
-
-
-
-
+public static void main(tring[] args)
+{
+    System.out.println("HELLO");
+}
+public static void main(String[] args){
+    
+}
 
 
 
